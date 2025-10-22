@@ -1,6 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/favicon.ico'
-// import viteLogo from '/vite.svg'
 import "./App.css";
 import BatterieToilettes from "./components/BatterieToilettes.jsx";
 import OccupationToilettes from "./components/OccupationToilettes.jsx";

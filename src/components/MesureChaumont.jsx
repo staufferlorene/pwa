@@ -49,11 +49,31 @@ function MesureChaumont() {
     void fetchMesures();
   }, []);
 
+  function autorisation() {
+    Notification.requestPermission().then((result) => {
+      if (result === "granted") {
+        randomNotification();
+      }
+    });
+  }
+
+  function randomNotification() {
+    const notifTitle = "Titre de la notif";
+    const msg = "ceci est un test";
+    const options = {
+      body: msg,
+    };
+    new Notification(notifTitle, options);
+    // Notification toutes les 30 secondes
+    setTimeout(randomNotification, 30000);
+  }
+
   return (
     <div>
       <h2>Mesure Chaumont</h2>
       <div>
         <p>Le niveau de l'eau est de : {mesures} mètres à Chaumont</p>
+        <button onClick={autorisation}>Demande d'autorisation</button>
       </div>
     </div>
   );

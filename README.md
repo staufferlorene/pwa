@@ -35,6 +35,7 @@ start .\docs\index.html
 
 ```
 pwa/
+├── docs/    
 ├── public/                         # Images de l'application
 ├── src/                            # Logique métier
 │   ├── components                  # Composants de l'application
